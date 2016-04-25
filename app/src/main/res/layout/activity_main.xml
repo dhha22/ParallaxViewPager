@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         />
-    <com.dhha22.parallaxviewpager.LinePageIndicator
+    <com.dhha22.parallaxviewpager.CirclePageIndicator
         android:id="@+id/indicator"
         android:layout_height="40dp"
         android:paddingLeft="14dp"

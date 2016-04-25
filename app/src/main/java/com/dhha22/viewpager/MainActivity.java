@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
 
+import com.dhha22.parallaxviewpager.CirclePageIndicator;
 import com.dhha22.parallaxviewpager.LinePageIndicator;
 import com.dhha22.parallaxviewpager.PageIndicator;
 import com.dhha22.parallaxviewpager.ParallaxViewPager;
@@ -26,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         mPager.setPageTransformer(false, pt);
 
         mAdapter = new DemoParallaxAdapter(getSupportFragmentManager());
-        mAdapter.setPager(mPager); //only for this transformer
+        mAdapter.setPager(mPager); //only for this taransformer
 
         Bundle bNina = new Bundle();
         bNina.putInt("image", R.drawable.bg_nina);
@@ -63,7 +64,8 @@ public class MainActivity extends AppCompatActivity {
             getActionBar().show();
         }
 
-        PageIndicator mIndicator = (LinePageIndicator)findViewById(R.id.indicator);
+        CirclePageIndicator mIndicator = (CirclePageIndicator)findViewById(R.id.indicator);
+        mIndicator.setRadius(20);
         mIndicator.setViewPager(mPager);
     }
 
